@@ -10,9 +10,11 @@ module Jekyll
             c.description 'Creates a new Zettel within subdir zettel'
             c.action do |_args, _options|
               uuid = new_zettel
-              new_page(uuid, "zettel/#{uuid}/index.md")
+              file = "zettel/#{uuid}/index.md"
+              new_page(uuid, file)
 
               Jekyll.logger.info '✓', "Created new Zettel with UUID: `#{uuid}`"
+              system("code #{File.expand_path(file)}")
             end
           end
         end
