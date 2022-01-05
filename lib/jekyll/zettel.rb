@@ -1,6 +1,8 @@
 require 'jekyll'
 require 'securerandom'
 require 'fileutils'
+require 'citeproc'
+require 'csl/styles'
 
 module Jekyll
   # Jekyll zettel to your service
@@ -14,4 +16,6 @@ module Jekyll
   end
 end
 
-require 'jekyll/zettel/commands/zettel'
+require 'jekyll/commands/zettel'
+require 'jekyll/zettel/references'
+require 'jekyll/zettel/reference'

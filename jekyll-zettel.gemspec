@@ -27,6 +27,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'fileutils', '>= 1.4', '< 2.0'
-  spec.add_dependency 'jekyll', '>= 3.8', '< 5.0'
+  spec.add_runtime_dependency 'citeproc-ruby', '>= 2.0', '< 3.0'
+  spec.add_runtime_dependency 'csl-styles', '>= 2.0', '< 3.0'
+  spec.add_runtime_dependency 'fileutils', '>= 1.4', '< 2.0'
+  spec.add_runtime_dependency 'jekyll', '>= 3.8', '< 5.0'
 end
