@@ -10,7 +10,7 @@ module Jekyll
       def generate(site)
         @site = site
 
-        @site.config['citeproc'] = CiteProc::Processor.new style: 'apa', format: 'html'
+        @site.config['citeproc'] = CiteProc::Processor.new locale: 'de-AT', style: 'apa', format: 'html'
 
         site.pages.each do |page|
           next unless page.path.to_s.end_with?('index.html') || page.path.to_s.end_with?('index.md')
