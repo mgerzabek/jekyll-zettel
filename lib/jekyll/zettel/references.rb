@@ -10,7 +10,7 @@ module Jekyll
       def generate(site)
         @site = site
 
-        @site.config['references'] = CiteProc::Processor.new style: 'apa', format: 'html'
+        @site.config['citeproc'] = CiteProc::Processor.new style: 'apa', format: 'html'
 
         site.pages.each do |page|
           next unless page.path.to_s.end_with?('index.html') || page.path.to_s.end_with?('index.md')
@@ -31,7 +31,7 @@ module Jekyll
 
       def register_reference(doc, file)
         if doc.data['reference'].include?('id')
-          @site.config['references'].register doc.data['reference']
+          @site.config['citeproc'].register doc.data['reference']
           doc.data['citekey'] = doc.data['reference']['id']
         else
           Jekyll.logger.warn LOG_KEY, 'missing property @id'

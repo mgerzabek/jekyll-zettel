@@ -6,7 +6,7 @@ module Jekyll
       def render(context)
         return unless context.registers[:page].key?('citekey')
 
-        context.registers[:site].config['references'].render :bibliography, id: context.registers[:page]['citekey']
+        context.registers[:site].config['citeproc'].render :bibliography, id: context.registers[:page]['citekey']
       end
     end
   end
