@@ -2,6 +2,7 @@ module Jekyll
   module Zettel
     # Enrich page front matter with object meta data
     class References < Jekyll::Generator
+      include Zettel
 
       priority :highest
 
@@ -19,7 +20,7 @@ module Jekyll
           tie_reference(page)
         end
 
-        write_catalog
+        write_catalog 'references'
       end
 
       def configure_citeproc
@@ -51,21 +52,6 @@ module Jekyll
         end
       end
 
-      def write_catalog
-        Jekyll.logger.info LOG_KEY, "Created references in `#{@site.in_dest_dir('.objects', 'references.json')}`"
-
-        page = Jekyll::PageWithoutAFile.new(@site, @site.source, '.objects', 'references.json').tap do |file|
-          file.content = JSON.pretty_generate(@site.data['references'])
-          file.data.merge!(
-            'layout' => nil,
-            'sitemap' => false,
-            )
-
-          file.output
-        end
-
-        @site.pages << page
-      end
     end
   end
 end
