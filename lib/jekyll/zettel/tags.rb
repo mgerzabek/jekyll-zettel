@@ -25,7 +25,7 @@ module Jekyll
         parts = doc.path.to_s.match(SLUG_FORMAT)
         @site.data['tags'][parts[:slug]] = {
           'slug' => parts[:slug],
-          'tag' => doc.data['kicker'] || 'Missing @kicker',
+          'tag' => doc.data['tag'] || 'Missing @tag',
           'label' => doc.data['title'] || 'Missing @title',
           'description' => doc.data['description'] || 'Missing @description'
         }
