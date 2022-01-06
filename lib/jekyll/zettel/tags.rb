@@ -24,10 +24,10 @@ module Jekyll
       def register_tag(doc)
         parts = doc.path.to_s.match(SLUG_FORMAT)
         @site.data['tags'][parts[:slug]] = {
-          slug: parts[:slug],
-          tag: doc.data['kicker'] || 'Missing @kicker',
-          label: doc.data['title'] || 'Missing @title',
-          description: doc.data['description'] || 'Missing @description'
+          'slug' => parts[:slug],
+          'tag' => doc.data['kicker'] || 'Missing @kicker',
+          'label' => doc.data['title'] || 'Missing @title',
+          'description' => doc.data['description'] || 'Missing @description'
         }
       end
 
