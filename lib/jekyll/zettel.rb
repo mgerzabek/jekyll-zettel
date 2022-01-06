@@ -10,7 +10,7 @@ module Jekyll
 
     autoload :VERSION, 'jekyll/zettel/version'
 
-    LOG_KEY = 'Jekyll Zettel'.freeze
+    LOG_KEY = 'Zettel:'.freeze
 
     class Error < StandardError; end
   end

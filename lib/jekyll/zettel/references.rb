@@ -10,13 +10,21 @@ module Jekyll
       def generate(site)
         @site = site
 
-        @site.config['citeproc'] = CiteProc::Processor.new locale: 'de-AT', style: 'apa', format: 'html'
+        configure_citeproc
 
         site.pages.each do |page|
           next unless page.path.to_s.end_with?('index.html') || page.path.to_s.end_with?('index.md')
 
           tie_reference(page)
         end
+      end
+
+      def configure_citeproc
+        locale = @site.config['citeproc']['locale'] || 'en-US'
+        style = @site.config['citeproc']['style'] || 'apa'
+
+        @site.config['citeproc'] = CiteProc::Processor.new locale: locale, style: style, format: 'html'
+        Jekyll.logger.info LOG_KEY, "Configured cite processor `#{locale}`/`#{style}`"
       end
 
       def tie_reference(doc)
