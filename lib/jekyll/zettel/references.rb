@@ -24,8 +24,8 @@ module Jekyll
       end
 
       def configure_citeproc
-        locale = @site.config['citeproc']['locale'] || 'en-US'
-        style = @site.config['citeproc']['style'] || 'apa'
+        locale = @site.config['citation']['locale'] || 'en-US'
+        style = @site.config['citation']['style'] || 'apa'
 
         @site.config['citeproc'] = CiteProc::Processor.new locale: locale, style: style, format: 'html'
         Jekyll.logger.info LOG_KEY, "Configured cite processor `#{locale}`/`#{style}`"
