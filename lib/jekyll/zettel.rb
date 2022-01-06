@@ -19,3 +19,4 @@ end
 require 'jekyll/commands/zettel'
 require 'jekyll/zettel/references'
 require 'jekyll/zettel/reference'
+require 'jekyll/zettel/timeline'
