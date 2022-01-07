@@ -29,18 +29,20 @@ module Jekyll
           'slug' => parts[:slug],
           'tag' => doc.data['tag'] || 'Missing @tag',
           'label' => doc.data['title'] || 'Missing @title',
-          'description' => doc.data['description'] || 'Missing @description'
+          'description' => doc.data['description'] || 'Missing @description',
+          'tags' => doc.data['tags']
         }
-        register_tags(doc, parts[:slug])
+        doc.data['slug'] = parts[:slug]
+        register_tags(doc)
       end
 
-      def register_tags(doc, slug)
+      def register_tags(doc)
         return unless doc.data.key?('tags')
 
         doc.data['tags'].each { |tag|
-          @site.data['tag2glosse'][slug] = [] unless @site.data['tag2glosse'].key?(slug)
+          @site.data['tag2glosse'][tag] = [] unless @site.data['tag2glosse'].key?(tag)
 
-          @site.data['tag2glosse'][slug] << tag
+          @site.data['tag2glosse'][tag] << doc.data['slug']
         }
       end
     end
