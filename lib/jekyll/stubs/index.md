@@ -1,4 +1,6 @@
 ---
+layout: zettel
+#
 # created_at: #{Time.now}
 #
 # Die UUID des Zettels entspricht dem Namen des Unterverzeichnisses.
@@ -9,14 +11,14 @@ zettel: #{uuid}
 # Die Dokumentation aller Properties findest du unter
 # https://jessas.org/dokumentation/zettel/#frontmatter
 #
-layout: 
 title: 
 description: 
+author:
 #
 # Optionale Properties
 #
-# author: 
 # tags: []
+# folgezettel: []
 # image:
 # via:
 #   text:
