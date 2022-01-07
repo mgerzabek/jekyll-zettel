@@ -11,6 +11,7 @@ module Jekyll
       def generate(site)
         @site = site
         @site.data['tags'] = {}
+        @site.data['tag2glosse'] = {}
 
         site.pages.each do |page|
           next unless SLUG_FORMAT.match?(page.path.to_s)
@@ -19,6 +20,7 @@ module Jekyll
         end
 
         write_catalog 'tags'
+        write_catalog 'tag2glosse'
       end
 
       def register_tag(doc)
@@ -29,8 +31,18 @@ module Jekyll
           'label' => doc.data['title'] || 'Missing @title',
           'description' => doc.data['description'] || 'Missing @description'
         }
+        register_tags(doc, parts[:slug])
       end
 
+      def register_tags(doc, slug)
+        return unless doc.data.key?('tags')
+
+        doc.data['tags'].each { |tag|
+          @site.data['tag2glosse'][slug] = [] unless @site.data['tag2glosse'].key?(slug)
+
+          @site.data['tag2glosse'][slug] << tag
+        }
+      end
     end
   end
 end
