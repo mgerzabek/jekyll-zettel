@@ -33,6 +33,7 @@ module Jekyll
 end
 
 require 'jekyll/commands/zettel'
+require 'jekyll/zettel/globals'
 require 'jekyll/zettel/references'
 require 'jekyll/zettel/reference'
 require 'jekyll/zettel/timeline'
