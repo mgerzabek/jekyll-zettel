@@ -9,7 +9,7 @@ layout: zettel
 zettel: #{uuid}
 #
 # Die Dokumentation aller Properties findest du unter
-# https://jessas.org/dokumentation/zettel/#frontmatter
+# https://jessas.org/projekt/dokumentation/zettel/#frontmatter
 #
 title: 
 description: 
@@ -17,10 +17,12 @@ author:
 #
 # Optionale Properties
 #
+# akteure: []
 # tags: []
 # folgezettel: []
 # image:
 # via:
 #   text:
 #   href:
+#   annotation:
 ---
