@@ -2,7 +2,7 @@ module Jekyll
   module Zettel
     # Enrich page front matter with object meta data
     class References < Jekyll::Generator
-      include Zettel
+      include Jekyll::Zettel
 
       priority :highest
 

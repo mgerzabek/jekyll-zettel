@@ -2,7 +2,7 @@ module Jekyll
   module Zettel
     # Generate tags.json from page front matter
     class Zettelkasten < Jekyll::Generator
-      include Zettel
+      include Jekyll::Zettel
 
       priority :low
 

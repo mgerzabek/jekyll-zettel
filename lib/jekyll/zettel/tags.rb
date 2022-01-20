@@ -2,7 +2,7 @@ module Jekyll
   module Zettel
     # Generate tags.json from page front matter
     class Tags < Jekyll::Generator
-      include Zettel
+      include Jekyll::Zettel
 
       SLUG_FORMAT = %r{glosse/(?<slug>.*)/index.(?<ext>html|md)}i.freeze
 

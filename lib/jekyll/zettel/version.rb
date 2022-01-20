@@ -1,5 +1,5 @@
 module Jekyll
   module Zettel
-    VERSION = '0.5.3'.freeze
+    VERSION = '0.6.1'.freeze
   end
 end
