@@ -6,12 +6,13 @@ layout: glosse
 # Die ID der Glosse entspricht dem Namen des Unterverzeichnisses.
 # Dieser Wert darf auf keinen Fall geändert werden!
 #
-glosse: #{args['slug']}
+glosse: #{args['slug']} 
+tag: #{args['title']}
 #
 # Die Dokumentation aller Properties findest du unter
 # https://jessas.org/projekt/dokumentation/glosse/#frontmatter
 #
-title: #{args['title']}
+title:
 description:
 author:
 #
