@@ -27,8 +27,8 @@ module Jekyll
       end
 
       def register_zettel(doc)
-        @site.data['zettelkasten'][doc.data['zettel']] = {
-          'zettel' => doc.data['zettel'],
+        @site.data['zettelkasten'][doc.data['id']] = {
+          'zettel' => doc.data['id'],
           'title' => doc.data['title'],
           'description' => doc.data['description'],
           'author' => doc.data['author'],
