@@ -6,7 +6,7 @@
 #  If you want to move or rename the page do it within the realms of
 #  this project.
 #
-page_id: #{args['id']}
+id: #{args['id']}
 #
 #
 # Be careful in changing the layout of this page.
@@ -28,3 +28,8 @@ description:
 # kicker:
 # image:
 ---
+
+
+<!-- Fußnoten -->
+
+<!-- Links -->

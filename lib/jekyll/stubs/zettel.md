@@ -6,7 +6,7 @@ layout: zettel
 # Die UUID des Zettels entspricht dem Namen des Unterverzeichnisses.
 # Dieser Wert darf auf keinen Fall geändert werden!
 #
-zettel: #{args['uuid']}
+id: #{args['uuid']}
 #
 # Die Dokumentation aller Properties findest du unter
 # https://jessas.org/projekt/dokumentation/zettel/#frontmatter
@@ -26,3 +26,8 @@ author:
 #   href:
 #   annotation:
 ---
+
+
+<!-- Fußnoten -->
+
+<!-- Links -->

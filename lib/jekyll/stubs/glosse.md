@@ -6,7 +6,7 @@ layout: glosse
 # Die ID der Glosse entspricht dem Namen des Unterverzeichnisses.
 # Dieser Wert darf auf keinen Fall geändert werden!
 #
-glosse: #{args['slug']} 
+id: #{args['slug']} 
 tag: #{args['title']}
 #
 # Die Dokumentation aller Properties findest du unter
@@ -21,3 +21,8 @@ author:
 # tags: []
 # image:
 ---
+
+
+<!-- Fußnoten -->
+
+<!-- Links -->
