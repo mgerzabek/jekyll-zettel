@@ -87,11 +87,14 @@ module Jekyll
 end
 
 require 'jekyll/commands/scaffold'
+require 'jekyll/zettel/akteur'
+require 'jekyll/zettel/blatt'
 require 'jekyll/zettel/globals'
 require 'jekyll/zettel/glosse'
 require 'jekyll/zettel/reference'
 require 'jekyll/zettel/references'
 require 'jekyll/zettel/tags'
 require 'jekyll/zettel/timeline'
+require 'jekyll/zettel/zeitleiste'
 require 'jekyll/zettel/zettel'
 require 'jekyll/zettel/zettelkasten'

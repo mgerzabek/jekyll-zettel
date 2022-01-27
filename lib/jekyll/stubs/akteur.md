@@ -1,5 +1,5 @@
 ---
-layout: blatt
+layout: akteur
 #
 # created_at: #{Time.now}
 #

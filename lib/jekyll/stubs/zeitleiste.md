@@ -1,5 +1,5 @@
 ---
-layout: blatt
+layout: timeline
 #
 # created_at: #{Time.now}
 #
@@ -9,10 +9,10 @@ layout: blatt
 id: #{args['slug']}
 #
 # Die Dokumentation aller Properties findest du unter
-# https://jessas.org/projekt/dokumentation/arbeitsblatt/#frontmatter
+# https://jessas.org/projekt/dokumentation/timeline/#frontmatter
 #
 title: #{args['title']}
-description:
+description: 
 #
 # Optionale Properties
 #
