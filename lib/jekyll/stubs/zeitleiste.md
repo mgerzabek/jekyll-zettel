@@ -1,5 +1,5 @@
 ---
-layout: timeline
+layout: zeitleiste
 #
 # created_at: #{Time.now}
 #
@@ -19,6 +19,7 @@ description:
 # tags: []
 # folgezettel: []
 # image:
+# video:
 # via:
 #   text:
 #   href:

@@ -1,0 +1,25 @@
+{
+  "title": {
+    "text": {
+      "headline": "Titel der Zeitleiste",
+      "text": "Text…"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": ""
+      },
+      "display_date": "",
+      "media": {
+        "url": "/assets/<infotype.pn>",
+        "link": "/<infotype>/<slug>/",
+        "link_target": "_parent"
+      },
+      "text": {
+        "headline": "Titel der Folie",
+        "text": "Folientext…"
+      }
+    }
+  ]
+}
