@@ -8,6 +8,11 @@ layout: zettel
 #
 id: #{args['uuid']}
 #
+# Der Status des Infotypen
+# https://jessas.org/projekt/dokumentation/infotype/#status
+#
+status: draft
+#
 # Die Dokumentation aller Properties findest du unter
 # https://jessas.org/projekt/dokumentation/zettel/#frontmatter
 #
