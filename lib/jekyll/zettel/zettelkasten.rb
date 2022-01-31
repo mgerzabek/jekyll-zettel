@@ -45,7 +45,7 @@ module Jekyll
         doc.data['tags'].each { |tag|
           @site.data['tag2zettel'][tag] = [] unless @site.data['tag2zettel'].key?(tag)
 
-          @site.data['tag2zettel'][tag] << doc.data['zettel']
+          @site.data['tag2zettel'][tag] << doc.data['id']
         }
       end
     end
