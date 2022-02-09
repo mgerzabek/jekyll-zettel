@@ -28,7 +28,7 @@ module Jekyll
         @site.data['tags'][parts[:slug]] = {
           'slug' => parts[:slug],
           'tag' => doc.data['tag'] || 'Missing @tag',
-          'label' => doc.data['title'] || 'Missing @title',
+          'title' => doc.data['title'] || 'Missing @title',
           'description' => doc.data['description'] || 'Missing @description',
           'tags' => doc.data['tags']
         }
