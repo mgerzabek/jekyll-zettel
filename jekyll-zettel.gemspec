@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'csl-styles', '>= 2.0', '< 3.0'
   spec.add_runtime_dependency 'fileutils', '>= 1.4', '< 2.0'
   spec.add_runtime_dependency 'jekyll', '>= 3.8', '< 5.0'
+  spec.add_runtime_dependency 'kramdown', '>=2.0', '< 3.0'
 end

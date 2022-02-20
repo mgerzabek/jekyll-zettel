@@ -4,9 +4,10 @@ module Jekyll
     class Reference < Liquid::Tag
 
       def render(context)
-        return unless context.registers[:page].key?('citekey')
+        doc = context.registers[:page]
+        return unless doc.key?('reference') && doc['reference'].key?('citation-key')
 
-        context.registers[:site].config['citeproc'].render :bibliography, id: context.registers[:page]['citekey']
+        context.registers[:site].config['citeproc'].render :bibliography, id: doc['reference']['citation-key']
       end
     end
   end

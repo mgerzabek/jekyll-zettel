@@ -3,6 +3,7 @@ require 'securerandom'
 require 'fileutils'
 require 'citeproc'
 require 'csl/styles'
+require 'kramdown/parser/kramdown'
 
 module Jekyll
   # Jekyll zettel to your service
@@ -89,6 +90,7 @@ end
 require 'jekyll/commands/scaffold'
 require 'jekyll/zettel/akteur'
 require 'jekyll/zettel/blatt'
+require 'jekyll/zettel/citedown'
 require 'jekyll/zettel/globals'
 require 'jekyll/zettel/glosse'
 require 'jekyll/zettel/reference'
@@ -98,3 +100,4 @@ require 'jekyll/zettel/timeline'
 require 'jekyll/zettel/zeitleiste'
 require 'jekyll/zettel/zettel'
 require 'jekyll/zettel/zettelkasten'
+
