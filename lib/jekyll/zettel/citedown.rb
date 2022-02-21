@@ -11,7 +11,7 @@ module Kramdown
         @span_parsers.unshift(:citation)
       end
 
-      CITATION = /\(@([\w,:]+)(;\s*(.*))?\)/.freeze
+      CITATION = /\[@([\w,:]+)(;\s*(.*))?\]/.freeze
 
       def parse_citation
         start_line_number = @src.current_line_number
@@ -19,6 +19,15 @@ module Kramdown
 
         cite_key = @src[1]
         note = @src[3]
+
+        if @references.key?(cite_key)
+          add_citation(cite_key, note, start_line_number)
+        else
+          add_error(cite_key)
+        end
+      end
+
+      def add_citation(cite_key, note, start_line_number)
         citation = @citeproc.render :citation, id: cite_key, locator: note, label: :note
         attributes = {
           'href' => "/zettel/#{@references[cite_key]['id']}/",
@@ -31,7 +40,12 @@ module Kramdown
         @tree.children << link
       end
 
-      define_parser(:citation, CITATION, '\(@')
+      def add_error(cite_key)
+        Jekyll.logger.warn 'Zettel:', "Missing entry for cite-key @#{cite_key}"
+        @tree.children << Element.new(:raw, "<span class=\"error\">Missing entry for cite-key @#{cite_key}</span>")
+      end
+
+      define_parser(:citation, CITATION, '\[@')
 
     end
   end
