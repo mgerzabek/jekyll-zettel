@@ -16,7 +16,7 @@ module Jekyll
     class Error < StandardError; end
 
     def write_catalog(object)
-      Jekyll.logger.info LOG_KEY, "Created references in `#{@site.in_dest_dir('.objects', "#{object}.json")}`"
+      Jekyll.logger.debug LOG_KEY, "Created references in `#{@site.in_dest_dir('.objects', "#{object}.json")}`"
 
       page = Jekyll::PageWithoutAFile.new(@site, @site.source, '.objects', "#{object}.json").tap do |file|
         file.content = JSON.pretty_generate(@site.data[object.to_s])
