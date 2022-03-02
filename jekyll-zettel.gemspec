@@ -27,9 +27,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_runtime_dependency 'citeproc', '>= 1.0.10', '< 2.0'
   spec.add_runtime_dependency 'citeproc-ruby', '>= 2.0', '< 3.0'
   spec.add_runtime_dependency 'csl-styles', '>= 2.0', '< 3.0'
   spec.add_runtime_dependency 'fileutils', '>= 1.4', '< 2.0'
   spec.add_runtime_dependency 'jekyll', '>= 3.8', '< 5.0'
   spec.add_runtime_dependency 'kramdown', '>=2.0', '< 3.0'
+
+  spec.add_development_dependency 'minitest', '>= 5.8'
+  spec.add_development_dependency 'minitest-reporters', '>= 1.1'
+  spec.add_development_dependency 'rake'
 end
